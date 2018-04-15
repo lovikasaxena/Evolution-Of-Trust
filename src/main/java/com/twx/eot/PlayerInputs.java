@@ -1,4 +1,6 @@
-package com.twx.eot.players;
+package com.twx.eot;
+
+import com.twx.eot.players.PlayerAction;
 
 import java.util.Objects;
 
@@ -29,15 +31,4 @@ public final class PlayerInputs {
         return player1Action;
     }
 
-    public PlayerAction getPlayer2Action() {
-        return player2Action;
-    }
-
-    @Override
-    public String toString() {
-        return "com.twx.eot.players.PlayerInputs{" +
-                "player1Action=" + player1Action +
-                ", player2Action=" + player2Action +
-                '}';
-    }
 }

@@ -1,6 +1,6 @@
 package com.twx.eot.players;
 
-public class CooperatePlayer extends PlayerBehaviour {
+public class CooperateBehaviour extends PlayerBehaviour {
     @Override
     public PlayerAction takeTurn() {
         return PlayerAction.COOPERATE;

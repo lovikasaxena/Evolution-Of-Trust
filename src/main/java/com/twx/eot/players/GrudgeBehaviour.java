@@ -1,21 +1,14 @@
 package com.twx.eot.players;
 
-public class GrudgePlayer extends PlayerBehaviour {
-    private boolean hasOtherPlayerCheated = false;
+public class GrudgeBehaviour extends CheatCautiousBehaviour {
 
     @Override
     public PlayerAction takeTurn() {
         isOtherPlayerPreviousActionCHEAT();
-        if (hasOtherPlayerCheated) {
+        if (hasOtherPlayerCheatedYet) {
             return PlayerAction.CHEAT;
         }
         return PlayerAction.COOPERATE;
-    }
-
-    private void isOtherPlayerPreviousActionCHEAT() {
-        if(otherPlayerPreviousAction == PlayerAction.CHEAT){
-            hasOtherPlayerCheated = true;
-        }
     }
 
 }

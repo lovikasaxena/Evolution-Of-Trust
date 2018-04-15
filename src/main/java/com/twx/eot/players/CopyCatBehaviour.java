@@ -1,6 +1,6 @@
 package com.twx.eot.players;
 
-public class CopyCatPlayer extends PlayerBehaviour {
+public class CopyCatBehaviour extends PlayerBehaviour {
 
     @Override
     public PlayerAction takeTurn() {

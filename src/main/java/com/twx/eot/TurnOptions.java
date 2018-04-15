@@ -1,6 +1,6 @@
-import com.twx.eot.players.PlayerAction;
-import com.twx.eot.players.PlayerInputs;
+package com.twx.eot;
 
+import com.twx.eot.players.PlayerAction;
 import java.util.HashMap;
 
 public class TurnOptions {

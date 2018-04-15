@@ -1,8 +1,8 @@
 package com.twx.eot.players;
 
-import com.twx.eot.players.PlayerAction;
-import com.twx.eot.players.PlayerBehaviour;
-public class UserPlayer extends PlayerBehaviour {
+import com.twx.eot.inputOutput.InputOutput;
+
+public class UserBehaviour extends PlayerBehaviour {
 
     @Override
     public PlayerAction takeTurn() {

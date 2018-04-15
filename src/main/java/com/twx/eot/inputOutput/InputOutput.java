@@ -1,4 +1,6 @@
-package com.twx.eot.players;
+package com.twx.eot.inputOutput;
+
+import com.twx.eot.exceptions.WrongInputException;
 
 import java.util.Scanner;
 
@@ -16,8 +18,9 @@ public class InputOutput {
          catch (WrongInputException e){
              InputOutput inputOutput = new InputOutput();
              inputOutput.display(e.getMessage());
+             return getInput();
          }
-        return null;
+        //return null;
     }
 
    public void display(String string){

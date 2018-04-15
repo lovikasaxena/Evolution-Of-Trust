@@ -1,7 +1,8 @@
-import com.twx.eot.players.InputOutput;
+package com.twx.eot;
+
+import com.twx.eot.inputOutput.InputOutput;
 import com.twx.eot.players.Player;
-import com.twx.eot.players.PlayerInputs;
-import com.twx.eot.players.WrongInputException;
+import com.twx.eot.exceptions.WrongInputException;
 
 public class Game {
     private final Player player1;
@@ -20,11 +21,10 @@ public class Game {
         previousRoundInputs = null;
     }
 
-    void start() throws WrongInputException {
+    public void start() throws WrongInputException {
         InputOutput inout = new InputOutput();
         for (int i = 0; i < totalRounds; i++) {
             PlayerInputs playerInputs = new PlayerInputs(player1.takeTurn(), player2.takeTurn());
-            //System.out.println(playerInputs);
             addResultToScores(getResultForRound(playerInputs));
             inout.display(displayScore());
             previousRoundInputs = playerInputs;
@@ -33,16 +33,7 @@ public class Game {
         inout.display(whoWins());
     }
 
-//    private com.twx.eot.players.PlayerInputs getPlayerInputs() {
-//        if (previousRoundInputs == null) {
-//            return new com.twx.eot.players.PlayerInputs(player1.takeTurn(null), player2.takeTurn(null));
-//        }
-//        com.twx.eot.players.PlayerAction player1PreviousInput = previousRoundInputs.getPlayer1Action();
-//        com.twx.eot.players.PlayerAction player2PreviousInput = previousRoundInputs.getPlayer2Action();
-//        return new com.twx.eot.players.PlayerInputs(player1.takeTurn(player2PreviousInput), player2.takeTurn(player1PreviousInput));
-//    }
-
-    String displayScore() {
+    public String displayScore() {
         return "Player1 score = " + scoreBoard.getPlayerOneScore() +
                 "; Player2 score = " + scoreBoard.getPlayerTwoScore();
     }

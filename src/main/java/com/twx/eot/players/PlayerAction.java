@@ -1,3 +1,5 @@
+package com.twx.eot.players;
+
 public enum PlayerAction {
     CHEAT, COOPERATE;
 

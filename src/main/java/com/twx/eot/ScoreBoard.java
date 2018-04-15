@@ -1,3 +1,5 @@
+package com.twx.eot;
+
 public class ScoreBoard {
     private int playerOneScore;
     private int playerTwoScore;

@@ -1,3 +1,5 @@
+package com.twx.eot;
+
 import java.util.Objects;
 
 public class Result {
