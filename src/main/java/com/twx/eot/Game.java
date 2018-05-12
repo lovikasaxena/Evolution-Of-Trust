@@ -21,7 +21,7 @@ public class Game {
         previousRoundInputs = null;
     }
 
-    public void start() throws WrongInputException {
+    public void start() {
         InputOutput inout = new InputOutput();
         for (int i = 0; i < totalRounds; i++) {
             PlayerInputs playerInputs = new PlayerInputs(player1.takeTurn(), player2.takeTurn());
